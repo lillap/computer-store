@@ -44,7 +44,7 @@
         <div class="row justify-content-around">
           <div class="col-md-4 rounded-sm color">
             <h5 id="customerName"></h5>
-            <div class="columnDetails"><strong>Balance: </strong><span id="customerAccountBalance" ></span></div>
+            <div class="infoDetails"><strong>Balance: </strong><span id="customerAccountBalance" ></span></div>
             <button class="btn btn-sm" id="getLoanBtn">Get a loan</button>
             <div id="loanForm"></div>
             <p id="loanMessage"></p>
@@ -52,11 +52,25 @@
 
           <div class="col-md-4 rounded-sm color" id="accountDetails">
               <h5>Work</h5>
-              <div class="PayDetails"><strong>Pay: </strong> <span id=></span></div>
-              <button class="btn btn-sm">Bank</button>
-              <button class="btn btn-sm">Work</button>
+              <div class="infoDetails"><strong>Pay: </strong> <span id="workPayBalance"></span></div>
+              <button class="btn btn-sm" id="transferToAccountBtn">Bank</button>
+              <button class="btn btn-sm" id="increaseWorkPayBtn">Work</button>
           </div>
-          <div class="col-md-4 rounded-sm color" id="laptopOptions">col-sm-4</div>
+          <div class="col-md-4 rounded-sm color" id="laptopOptions">
+            <h5>Laptops</h5>
+            <div>
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Available Products
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Macbook Pro</a>
+                      <a class="dropdown-item" href="#">Lenovo Thinkpad</a>
+                      <a class="dropdown-item" href="#">HP Elitebook</a>
+                    </div>
+                  </div>
+            </div>
+          </div>
         </div>
         <hr>
         <div class="row justify-content-center">
@@ -69,7 +83,7 @@
 
     <!--Footer-->
     <footer class="page-footer fixed-bottom" id="footer"> 
-        <div class="footer-copyright text-center pt-3 white-text"> © 2020 Copyright</div>
+        <div class="footer-copyright text-center pt-3 white-text"> © 2020 Copyright lillap</div>
     </footer>
 
     <!--Components js-->

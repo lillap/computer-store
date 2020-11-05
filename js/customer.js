@@ -5,19 +5,37 @@ let customer =
         accountBalance: 2000, 
         noOfLoans: 0,
         noOfPurchasedLaptops: 0, 
+        workPayBalance: 0,
     };
 
-function renderCustomer(){
+let loanInput;
+let submitFormBtn;
+
+/* Values to be presented in HTML */
+let loanForm = document.getElementById("loanForm");
+
+let errorMessage = document.getElementById("loanMessage");
+let workPayBalance = document.getElementById("workPayBalance");
+
+/* Buttons with logic when clicked on */
+let getLoanBtn = document.getElementById("getLoanBtn");
+getLoanBtn.addEventListener("click", renderLoanForm);
+
+let increaseWorkPayBtn = document.getElementById("increaseWorkPayBtn");
+increaseWorkPayBtn.addEventListener("click", increaseWorkPayment);
+
+let transferToAccountBtn = document.getElementById("transferToAccountBtn");
+transferToAccountBtn.addEventListener("click", transferPayBalanceToAccount);
+
+/* Functions */
+function renderCustomerDetails(){
     document.getElementById("customerName").innerText = `${customer.firstName} ${customer.lastName}`
     document.getElementById("customerAccountBalance").innerText = ` ${customer.accountBalance} SEK.`
 }
 
-
-let loanForm = document.getElementById("loanForm");
-let getLoanBtn = document.getElementById("getLoanBtn");
-let loanInput;
-let submitFormBtn;
-let errorMessage = document.getElementById("loanMessage");
+function renderWorkDetails() {
+    document.getElementById("workPayBalance").innerText = `${customer.workPayBalance} SEK.`
+}
 
 function renderLoanForm(){
     loanForm.innerHTML = `
@@ -32,7 +50,7 @@ function renderLoanForm(){
  
         if(customer.noOfLoans <= customer.noOfPurchasedLaptops ){
            if(requestedLoan <= customer.accountBalance* 2){ customer.accountBalance += requestedLoan;
-                renderCustomer();
+                renderCustomerDetails();
                 customer.noOfLoans++;
                 loanForm.innerHTML ="";
             } else {
@@ -44,12 +62,21 @@ function renderLoanForm(){
     })
 }
 
-getLoanBtn.addEventListener("click",(event ) => {
-    event.preventDefault();
-    renderLoanForm();
-})
+function increaseWorkPayment() {
+    customer.workPayBalance += 100;
+    console.log(customer.workPayBalance);
+    renderWorkDetails();
+}
 
-renderCustomer();
+function transferPayBalanceToAccount() {
+    customer.accountBalance += customer.workPayBalance;
+    customer.workPayBalance = 0;
+    renderWorkDetails();
+    renderCustomerDetails();
+}
+
+renderCustomerDetails();
+renderWorkDetails();
 
 
 
