@@ -64,7 +64,6 @@ function renderLoanForm(){
 
 function increaseWorkPayment() {
     customer.workPayBalance += 100;
-    console.log(customer.workPayBalance);
     renderWorkDetails();
 }
 
