@@ -10,11 +10,13 @@
     <script src="https://kit.fontawesome.com/77fc235554.js" crossorigin="anonymous"></script>
     <!--Css stylesheets-->
     <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     
 </head>
 <body>
+    
     <!--Navbar Header-->
-    <nav class="navbar navbar-expand-sm navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark">
         <a class="navbar-brand" href="#">Computer Store</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,20 +24,59 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home 
-                        <span class="sr-only">(current)</span></a>
+                <li class="nav-item active ">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Shop</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#">My Page</a>
                 </li>
             </ul>
         </div>
     </nav>
+
+    <!--Layout-->
     
+    <div class="container">
+
+        <div class="row justify-content-around">
+          <div class="col-md-4 rounded-sm color">
+            <h5 id="customerName"></h5>
+            <div class="columnDetails"><strong>Balance: </strong><span id="customerAccountBalance" ></span></div>
+            <button class="btn btn-sm" id="getLoanBtn">Get a loan</button>
+          </div>
+
+          <div class="col-md-4 rounded-sm color" id="accountDetails">
+              <h5>Work</h5>
+              <div class="PayDetails"><strong>Pay: </strong> <span id=></span></div>
+              <button class="btn btn-sm">Bank</button>
+              <button class="btn btn-sm">Work</button>
+          </div>
+          <div class="col-md-4 rounded-sm color" id="laptopOptions">col-sm-4</div>
+        </div>
+        <hr>
+        <div class="row justify-content-center">
+          <div class="col-sm rounded-sm color" id="laptopDetails">col-sm</div>
+        </div>
+      </div>
+
+
+    
+
+    <!--Footer-->
+    <footer class="page-footer fixed-bottom" id="footer"> 
+        <div class="footer-copyright text-center pt-3 white-text"> © 2020 Copyright</div>
+    </footer>
+
+    <!--Components js-->
+    <script type="module" src="js/components/header.js"></script>
+  
+
+    <!--Customer-->
+    <script type="text/javascript" src="js/customer.js"></script>
+
     <!--Bootstrap scripts-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
