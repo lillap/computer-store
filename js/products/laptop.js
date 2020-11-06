@@ -93,11 +93,21 @@ function renderLaptopFeatures(productFeatures) {
 }
 
 function renderLaptopDetails (product) {
+    let revealProductContainer = document.getElementById("revealProductContainer");
+    revealProductContainer.classList.remove("invisible");
+
+    let productHeading = document.getElementById("productModelName");
+    productHeading.innerText = product.model;
+
     document.getElementById("displayProductResult").innerHTML = `
-    <h4>${product.model}</h4>
-    <img src="${product.productImg}" alt="image">
-    <h5>Price: ${product.price} SEK</h5>
-    <p id="productDescription">${product.description}</p>` 
+    <div id="productContentLayout">
+        <img src="${product.productImg}" alt="image">
+        <div>    
+            <h5>Price: ${product.price} SEK</h5>
+            <p id="productDescription">${product.description}</p>
+        </div>
+    </div>`
+    
     
 }
 
