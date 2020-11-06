@@ -17,48 +17,59 @@
 </head>
 
 <body>
-
-    <!--Navbar Header-->
-    <nav class="navbar navbar-expand-md navbar-dark">
-        <a class="navbar-brand" href="#">Computer Store</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item active ">
-                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Shop</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">My Page</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <header class="pb-4">
+        <!--Navbar Header-->
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand" href="#">Computer Store</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active ">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">My Page</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <!--Layout-->
 
     <div class="container">
-
         <div class="row justify-content-around">
+
+            <!--Customer Box-->
             <div class="col-md-4 rounded-sm color">
                 <h5 id="customerName"></h5>
-                <div class="infoDetails"><strong>Balance: </strong><span id="customerAccountBalance"></span></div>
+                <div class="infoDisplay">
+                    <strong>Balance: </strong>
+                    <div><span id="accountBalance"></span> SEK.</div>
+                </div>
                 <button class="btn btn-sm" id="getLoanBtn">Get a loan</button>
                 <div id="loanForm"></div>
                 <p id="loanMessage"></p>
             </div>
 
+            <!--Work Box-->
             <div class="col-md-4 rounded-sm color" id="accountDetails">
                 <h5>Work</h5>
-                <div class="infoDetails"><strong>Pay: </strong> <span id="workPayBalance"></span></div>
+                <div class="infoDisplay">
+                    <strong>Pay: </strong>
+                    <div><span id="workPayBalance"></span> SEK.</div>
+                </div>
                 <button class="btn btn-sm" id="transferToAccountBtn">Bank</button>
                 <button class="btn btn-sm" id="increaseWorkPayBtn">Work</button>
             </div>
+
+            <!--Products Box-->
             <div class="col-md-4 rounded-sm color" id="laptopOptions">
                 <h5>Laptops</h5>
                 <div>
@@ -69,11 +80,12 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#" id="macbookOption">Macbook Pro</a>
-                            <a class="dropdown-item" href="#" id="lenovoOption">Lenovo Thinkpad</a>
-                            <a class="dropdown-item" href="#" id="hpOption">HP Elitebook</a>
+                            <a class="dropdown-item" href="#" id="lenovoOption">Lenovo ThinkPad E14</a>
+                            <a class="dropdown-item" href="#" id="hpOption">Hp EliteBook 840 G7</a>
+                            <a class="dropdown-item" href="#" id="chromebookOption">Asus Chromebook Flip C434</a>
                         </div>
                     </div>
-                    <div class="laptopDetails">
+                    <div class="laptopFeatures">
                         <strong>Features: </strong>
                         <div id="listOfLaptopFeatures"></div>
                     </div>
@@ -82,23 +94,22 @@
         </div>
         <hr>
         <div class="row justify-content-center">
-            <div class="col-sm rounded-sm color" id="laptopDetails">col-sm</div>
+            <div class="col-sm rounded-sm color">
+                    <div id="displayProductResult"></div>
+                    <button class="btn btn-md float-right" id="buyProductBtn">Buy Now</button>
+                    <p id="purchaseMessage"></p>
+            </div>
         </div>
     </div>
 
-
-
-
     <!--Footer-->
-    <footer class="page-footer fixed-bottom" id="footer">
-        <div class="footer-copyright text-center pt-3 white-text"> © 2020 Copyright lillap</div>
+    <footer class="footer">
+        <div class="text-center pt-3"> © 2020 Copyright <strong>lillap</strong></div>
     </footer>
 
-    <!--Customer-->
-    <script type="text/javascript" src="js/customer.js"></script>
-
-    <!--Product-->
-    <script type="text/javascript" src="js/store/product.js"></script>
+    <!--Scripts-->
+    <script type="text/javascript" src="js/customers/customer.js"></script>
+    <script type="text/javascript" src="js/products/laptop.js"></script>
     
     <!--Bootstrap scripts-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

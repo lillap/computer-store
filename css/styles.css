@@ -1,5 +1,11 @@
 @import "fonts.css";
 
+
+body {
+    margin: 0;
+
+}
+
 .navbar {
     background-color: #000000;
 }
@@ -9,6 +15,15 @@
 }
 .navbar-inverse .navbar-brand {
     color: #ffffff;
+}
+
+.container {
+    padding-bottom: 7%;
+}
+
+h4, h5 {
+    text-align: center;
+    padding: 5%;
 }
 
 .color {
@@ -32,13 +47,25 @@ hr {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.infoDetails {
+.infoDisplay {
     display: flex;
     justify-content: space-between;
 }
 
-#footer {
+#displayLaptopModel{
+    text-align: center;
+}
+
+#productDescription {
+    display: block;
+    text-align: center;
+}
+
+.footer {
     background-color: #000000;
     height: 7%;
     color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

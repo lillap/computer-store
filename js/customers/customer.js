@@ -30,11 +30,11 @@ transferToAccountBtn.addEventListener("click", transferPayBalanceToAccount);
 /* Functions */
 function renderCustomerDetails(){
     document.getElementById("customerName").innerText = `${customer.firstName} ${customer.lastName}`
-    document.getElementById("customerAccountBalance").innerText = ` ${customer.accountBalance} SEK.`
+    document.getElementById("accountBalance").innerText = ` ${customer.accountBalance}`
 }
 
 function renderWorkDetails() {
-    document.getElementById("workPayBalance").innerText = `${customer.workPayBalance} SEK.`
+    document.getElementById("workPayBalance").innerText = `${customer.workPayBalance}`
 }
 
 function renderLoanForm(){
@@ -46,8 +46,7 @@ function renderLoanForm(){
 
     submitFormBtn.addEventListener("click", (event )=> {
         let requestedLoan = parseInt(loanInput.value);
-        console.log(requestedLoan);
- 
+
         if(customer.noOfLoans <= customer.noOfPurchasedLaptops ){
            if(requestedLoan <= customer.accountBalance* 2){ customer.accountBalance += requestedLoan;
                 renderCustomerDetails();
