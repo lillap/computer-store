@@ -13,4 +13,4 @@ Computer store is an application Built in Vanilla JS, CSS and HTML5. It lets a u
 ### Usage
 
 ### Contributing
-No further development is planned or necessary as of now, but feel free suggest improvements!
+No further development is planned or necessary as of now, but feel free to suggest improvements!
