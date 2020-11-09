@@ -12,11 +12,11 @@ Computer store is an application Built in Vanilla JS, CSS and HTML5. It lets a u
 
 ### Usage
 This is an overview of the application:
-![Overview](readmeResource/computer-store1.png)
+![Overview](readMeAssets/computer-store1.png)
 
 
 When choosing a laptop from the dropdown, a description box is shown: 
-![LaptopDescription](readmeResource/compute-store2.png)
+![LaptopDescription](readMeAssets/compute-store2.png)
 
 ### Contributing
 No further development is planned or necessary as of now, but feel free to suggest improvements!
